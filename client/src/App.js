@@ -10,6 +10,8 @@ import store from './store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+React.initializeTouchEvents(true);
+
 function App() {
   return (
     <Provider store={store}>
