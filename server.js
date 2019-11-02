@@ -14,11 +14,11 @@ require('dotenv').config();
 app.use(bodyParser.json());
 
 // DB Config
-const db = require('./config/keys').mongoURI;
+//const db = require('./config/keys').mongoURI;
 
 // Connect to mongo
 mongoose
-    .connect(db, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true})
+    .connect(process.env.MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true})
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
