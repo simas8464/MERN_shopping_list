@@ -7,6 +7,7 @@ const items = require('./routes/api/items');
 
 const app = express();
 
+// Dotenv to hide uri
 require('dotenv').config();
 
 // Bodyparser Middleware
